@@ -12,10 +12,6 @@ pPed = PlayerPedId()
 
 
 Citizen.CreateThread(function()
-    while not isPlayerLoaded do
-        Citizen.Wait(1000)
-        if pPed == -1 then isPlayerLoaded = 1 end
-    end
 
     while true do
         Citizen.Wait(1000)
