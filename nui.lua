@@ -17,12 +17,13 @@ end
 
 CreateThread(function()
     while true do
-        Wait(1000)
-        local coords = GetEntityCoords(PlayerPedId())
+        Wait(2500)
+        local ped = PlayerPedId()
+        local coords = GetEntityCoords(ped)
         local roadhash = GetStreetNameAtCoord(coords.x, coords.y, coords.z)
         local road = GetStreetNameFromHashKey(roadhash)
 
-        if IsPedInAnyVehicle(pPed) then
+        if IsPedInAnyVehicle(ped) then
             limit = SpeedLimits[road]
             if not limit then
                 if locale == "mph" then
