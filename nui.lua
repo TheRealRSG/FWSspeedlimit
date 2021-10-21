@@ -1,6 +1,5 @@
-isPlayerLoaded = 0
-limit = "Error"
-locale = "mph" -- Change this to kmh to change to KM/H
+local limit = "Error"
+local locale <const> = "mph" -- Change this to kmh to change to KM/H
 if locale == "mph" then
     SpeedLimits = {["Joshua Rd"]=60, ["East Joshua Road"]=60, ["Marina Dr"]=30, ["Alhambra Dr"]=30, ["Niland Ave"]=30, ["Zancudo Ave"]=30, ["Armadillo Ave"]=30, ["Algonquin Blvd"]=30, ["Mountain View Dr"]=30, ["Cholla Springs Ave"]=30, ["Panorama Dr"]=45, ["Lesbos Ln"]=30, ["Calafia Rd"]=30, ["North Calafia Way"]=30, ["Cassidy Trail"]=30, ["Seaview Rd"]=30, ["Grapeseed Main St"]=30, ["Grapeseed Ave"]=30, ["Joad Ln"]=30, ["Union Rd"]=30, ["O'Neil Way"]=30, ["Senora Fwy [Route 13]"]=75, ["Senora Fwy"]=75, ["Catfish View"]=30, ["Great Ocean Hwy"]=70, ["Paleto Blvd"]=30, ["Duluoz Ave"]=30, ["Procopio Dr"]=30, ["Cascabel Ave"]=30, ["Procopio Promenade"]=30, ["Pyrite Ave"]=30, ["Fort Zancudo Approach Rd"]=30, ["Barbareno Rd"]=30, ["Ineseno Road"]=30, ["West Eclipse Blvd"]=30, ["Playa Vista"]=30, ["Bay City Ave"]=30, ["Del Perro Fwy"]=75, ["Equality Way"]=30, ["Red Desert Ave"]=30, ["Magellan Ave"]=30, ["Sandcastle Way"]=30, ["Vespucci Blvd"]=30, ["Prosperity St"]=30, ["San Andreas Ave"]=30, ["North Rockford Dr"]=30, ["South Rockford Dr"]=30, ["Marathon Ave"]=30, ["Boulevard Del Perro"]=30, ["Cougar Ave"]=30, ["Liberty St"]=30, ["Bay City Incline"]=30, ["Conquistador St"]=30, ["Cortes St"]=30, ["Vitus St"]=30, ["Aguja St"]=30, ["Goma St"]=30, ["Melanoma St"]=30, ["Palomino Ave"]=30, ["Invention Ct"]=30, ["Imagination Ct"]=30, ["Rub St"]=30, ["Tug St"]=30, ["Ginger St"]=30, ["Lindsay Circus"]=30, ["Calais Ave"]=30, ["Adam's Apple Blvd"]=30, ["Alta St"]=30, ["Integrity Way"]=30, ["Swiss St"]=30, ["Strawberry Ave"]=30, ["Capital Blvd"]=30, ["Crusade Rd"]=30, ["Innocence Blvd"]=30, ["Davis Ave"]=30, ["Little Bighorn Ave"]=30, ["Roy Lowenstein Blvd"]=30, ["Jamestown St"]=30, ["Carson Ave"]=45, ["Grove St"]=30, ["Brouge Ave"]=30, ["Covenant Ave"]=30, ["Dutch London St"]=30, ["Signal St"]=30, ["Elysian Fields Fwy"]=75, ["Plaice Pl"]=30, ["Chum St"]=30, ["Chupacabra St"]=30, ["Miriam Turner Overpass"]=30, ["Autopia Pkwy"]=30, ["Exceptionalists Way"]=30, ["La Puerta Fwy"]=75, ["New Empire Way"]=30, ["Runway1"]="--", ["Greenwich Pkwy"]=30, ["Kortz Dr"]=30, ["Banham Canyon Dr"]=30, ["Buen Vino Rd"]=30, ["Route 68"]=60, ["Zancudo Grande Valley"]=30, ["Zancudo Barranca"]=30, ["Galileo Rd"]=30, ["Mt Vinewood Dr"]=30, ["Marlowe Dr"]=30, ["Milton Rd"]=30, ["Kimble Hill Dr"]=30, ["Normandy Dr"]=30, ["Hillcrest Ave"]=30, ["Hillcrest Ridge Access Rd"]=30, ["North Sheldon Ave"]=30, ["Lake Vinewood Dr"]=30, ["Lake Vinewood Est"]=30, ["Baytree Canyon Rd"]=30, ["Peaceful St"]=30, ["North Conker Ave"]=30, ["Wild Oats Dr"]=30, ["Whispymound Dr"]=30, ["Didion Dr"]=30, ["Cox Way"]=30, ["Picture Perfect Drive"]=30, ["South Mo Milton Dr"]=30, ["Cockingend Dr"]=30, ["Mad Wayne Thunder Dr"]=30, ["Hangman Ave"]=30, ["Dunstable Ln"]=30, ["Dunstable Dr"]=30, ["Greenwich Way"]=30, ["Greenwich Pl"]=30, ["Hardy Way"]=30, ["Richman St"]=30, ["Ace Jones Dr"]=30, ["Los Santos Fwy"]=75, ["Senora Rd"]=30, ["Nowhere Rd"]=35, ["Smoke Tree Rd"]=30, ["Cholla Rd"]=30, ["Cat-Claw Ave"]=30, ["Senora Way"]=30, ["Palomino Fwy"]=75, ["Shank St"]=30, ["Macdonald St"]=30, ["Route 68 Approach"]=75, ["Vinewood Park Dr"]=30, ["Vinewood Blvd"]=30, ["Mirror Park Blvd"]=30, ["Glory Way"]=30, ["Bridge St"]=30, ["West Mirror Drive"]=30, ["Nikola Ave"]=30, ["East Mirror Dr"]=30, ["Nikola Pl"]=35, ["Mirror Pl"]=30, ["El Rancho Blvd"]=30, ["Olympic Fwy"]=75, ["Fudge Ln"]=30, ["Amarillo Vista"]=30, ["Labor Pl"]=30, ["El Burro Blvd"]=30, ["Sustancia Rd"]=55, ["South Shambles St"]=30, ["Hanger Way"]=30, ["Orchardville Ave"]=30, ["Popular St"]=30, ["Buccaneer Way"]=55, ["Abattoir Ave"]=30, ["Voodoo Place"]=40, ["Mutiny Rd"]=30, ["South Arsenal St"]=30, ["Forum Dr"]=30, ["Morningwood Blvd"]=30, ["Dorset Dr"]=30, ["Caesars Place"]=30, ["Spanish Ave"]=30, ["Portola Dr"]=30, ["Edwood Way"]=30, ["San Vitus Blvd"]=30, ["Eclipse Blvd"]=30, ["Gentry Lane"]=40, ["Las Lagunas Blvd"]=30, ["Power St"]=30, ["Mt Haan Rd"]=30, ["Elgin Ave"]=30, ["Hawick Ave"]=30, ["Meteor St"]=30, ["Alta Pl"]=30, ["Occupation Ave"]=30, ["Carcer Way"]=30, ["Eastbourne Way"]=30, ["Rockford Dr"]=30, ["Abe Milton Pkwy"]=30, ["Laguna Pl"]=30, ["Sinners Passage"]=30, ["Atlee St"]=30, ["Sinner St"]=30, ["Supply St"]=30, ["Amarillo Way"]=30, ["Tower Way"]=30, ["Decker St"]=30, ["Tackle St"]=30, ["Low Power St"]=30, ["Clinton Ave"]=30, ["Fenwell Pl"]=30, ["Utopia Gardens"]=30, ["Cavalry Blvd"]=30, ["South Boulevard Del Perro"]=30, ["Americano Way"]=30, ["Sam Austin Dr"]=30, ["East Galileo Ave"]=30, ["Galileo Park"]=30, ["West Galileo Ave"]=30, ["Tongva Dr"]=30, ["Zancudo Rd"]=30, ["Movie Star Way"]=30, ["Heritage Way"]=30, ["Perth St"]=30, ["Chianski Passage"]=30, ["Lolita Ave"]=30, ["Meringue Ln"]=30, ["Strangeways Dr"]=30}
 elseif locale == "kmh" then
@@ -8,21 +7,24 @@ elseif locale == "kmh" then
 else -- If you fuck up, the locale definition, it defaults to mph.
     SpeedLimits = {["Joshua Rd"]=60, ["East Joshua Road"]=60, ["Marina Dr"]=30, ["Alhambra Dr"]=30, ["Niland Ave"]=30, ["Zancudo Ave"]=30, ["Armadillo Ave"]=30, ["Algonquin Blvd"]=30, ["Mountain View Dr"]=30, ["Cholla Springs Ave"]=30, ["Panorama Dr"]=45, ["Lesbos Ln"]=30, ["Calafia Rd"]=30, ["North Calafia Way"]=30, ["Cassidy Trail"]=30, ["Seaview Rd"]=30, ["Grapeseed Main St"]=30, ["Grapeseed Ave"]=30, ["Joad Ln"]=30, ["Union Rd"]=30, ["O'Neil Way"]=30, ["Senora Fwy [Route 13]"]=75, ["Senora Fwy"]=75, ["Catfish View"]=30, ["Great Ocean Hwy"]=70, ["Paleto Blvd"]=30, ["Duluoz Ave"]=30, ["Procopio Dr"]=30, ["Cascabel Ave"]=30, ["Procopio Promenade"]=30, ["Pyrite Ave"]=30, ["Fort Zancudo Approach Rd"]=30, ["Barbareno Rd"]=30, ["Ineseno Road"]=30, ["West Eclipse Blvd"]=30, ["Playa Vista"]=30, ["Bay City Ave"]=30, ["Del Perro Fwy"]=75, ["Equality Way"]=30, ["Red Desert Ave"]=30, ["Magellan Ave"]=30, ["Sandcastle Way"]=30, ["Vespucci Blvd"]=30, ["Prosperity St"]=30, ["San Andreas Ave"]=30, ["North Rockford Dr"]=30, ["South Rockford Dr"]=30, ["Marathon Ave"]=30, ["Boulevard Del Perro"]=30, ["Cougar Ave"]=30, ["Liberty St"]=30, ["Bay City Incline"]=30, ["Conquistador St"]=30, ["Cortes St"]=30, ["Vitus St"]=30, ["Aguja St"]=30, ["Goma St"]=30, ["Melanoma St"]=30, ["Palomino Ave"]=30, ["Invention Ct"]=30, ["Imagination Ct"]=30, ["Rub St"]=30, ["Tug St"]=30, ["Ginger St"]=30, ["Lindsay Circus"]=30, ["Calais Ave"]=30, ["Adam's Apple Blvd"]=30, ["Alta St"]=30, ["Integrity Way"]=30, ["Swiss St"]=30, ["Strawberry Ave"]=30, ["Capital Blvd"]=30, ["Crusade Rd"]=30, ["Innocence Blvd"]=30, ["Davis Ave"]=30, ["Little Bighorn Ave"]=30, ["Roy Lowenstein Blvd"]=30, ["Jamestown St"]=30, ["Carson Ave"]=45, ["Grove St"]=30, ["Brouge Ave"]=30, ["Covenant Ave"]=30, ["Dutch London St"]=30, ["Signal St"]=30, ["Elysian Fields Fwy"]=75, ["Plaice Pl"]=30, ["Chum St"]=30, ["Chupacabra St"]=30, ["Miriam Turner Overpass"]=30, ["Autopia Pkwy"]=30, ["Exceptionalists Way"]=30, ["La Puerta Fwy"]=75, ["New Empire Way"]=30, ["Runway1"]="--", ["Greenwich Pkwy"]=30, ["Kortz Dr"]=30, ["Banham Canyon Dr"]=30, ["Buen Vino Rd"]=30, ["Route 68"]=60, ["Zancudo Grande Valley"]=30, ["Zancudo Barranca"]=30, ["Galileo Rd"]=30, ["Mt Vinewood Dr"]=30, ["Marlowe Dr"]=30, ["Milton Rd"]=30, ["Kimble Hill Dr"]=30, ["Normandy Dr"]=30, ["Hillcrest Ave"]=30, ["Hillcrest Ridge Access Rd"]=30, ["North Sheldon Ave"]=30, ["Lake Vinewood Dr"]=30, ["Lake Vinewood Est"]=30, ["Baytree Canyon Rd"]=30, ["Peaceful St"]=30, ["North Conker Ave"]=30, ["Wild Oats Dr"]=30, ["Whispymound Dr"]=30, ["Didion Dr"]=30, ["Cox Way"]=30, ["Picture Perfect Drive"]=30, ["South Mo Milton Dr"]=30, ["Cockingend Dr"]=30, ["Mad Wayne Thunder Dr"]=30, ["Hangman Ave"]=30, ["Dunstable Ln"]=30, ["Dunstable Dr"]=30, ["Greenwich Way"]=30, ["Greenwich Pl"]=30, ["Hardy Way"]=30, ["Richman St"]=30, ["Ace Jones Dr"]=30, ["Los Santos Fwy"]=75, ["Senora Rd"]=30, ["Nowhere Rd"]=35, ["Smoke Tree Rd"]=30, ["Cholla Rd"]=30, ["Cat-Claw Ave"]=30, ["Senora Way"]=30, ["Palomino Fwy"]=75, ["Shank St"]=30, ["Macdonald St"]=30, ["Route 68 Approach"]=75, ["Vinewood Park Dr"]=30, ["Vinewood Blvd"]=30, ["Mirror Park Blvd"]=30, ["Glory Way"]=30, ["Bridge St"]=30, ["West Mirror Drive"]=30, ["Nikola Ave"]=30, ["East Mirror Dr"]=30, ["Nikola Pl"]=35, ["Mirror Pl"]=30, ["El Rancho Blvd"]=30, ["Olympic Fwy"]=75, ["Fudge Ln"]=30, ["Amarillo Vista"]=30, ["Labor Pl"]=30, ["El Burro Blvd"]=30, ["Sustancia Rd"]=55, ["South Shambles St"]=30, ["Hanger Way"]=30, ["Orchardville Ave"]=30, ["Popular St"]=30, ["Buccaneer Way"]=55, ["Abattoir Ave"]=30, ["Voodoo Place"]=40, ["Mutiny Rd"]=30, ["South Arsenal St"]=30, ["Forum Dr"]=30, ["Morningwood Blvd"]=30, ["Dorset Dr"]=30, ["Caesars Place"]=30, ["Spanish Ave"]=30, ["Portola Dr"]=30, ["Edwood Way"]=30, ["San Vitus Blvd"]=30, ["Eclipse Blvd"]=30, ["Gentry Lane"]=40, ["Las Lagunas Blvd"]=30, ["Power St"]=30, ["Mt Haan Rd"]=30, ["Elgin Ave"]=30, ["Hawick Ave"]=30, ["Meteor St"]=30, ["Alta Pl"]=30, ["Occupation Ave"]=30, ["Carcer Way"]=30, ["Eastbourne Way"]=30, ["Rockford Dr"]=30, ["Abe Milton Pkwy"]=30, ["Laguna Pl"]=30, ["Sinners Passage"]=30, ["Atlee St"]=30, ["Sinner St"]=30, ["Supply St"]=30, ["Amarillo Way"]=30, ["Tower Way"]=30, ["Decker St"]=30, ["Tackle St"]=30, ["Low Power St"]=30, ["Clinton Ave"]=30, ["Fenwell Pl"]=30, ["Utopia Gardens"]=30, ["Cavalry Blvd"]=30, ["South Boulevard Del Perro"]=30, ["Americano Way"]=30, ["Sam Austin Dr"]=30, ["East Galileo Ave"]=30, ["Galileo Park"]=30, ["West Galileo Ave"]=30, ["Tongva Dr"]=30, ["Zancudo Rd"]=30, ["Movie Star Way"]=30, ["Heritage Way"]=30, ["Perth St"]=30, ["Chianski Passage"]=30, ["Lolita Ave"]=30, ["Meringue Ln"]=30, ["Strangeways Dr"]=30}
 end
-pPed = PlayerPedId()
 
+local function limitUi(bool)
+    SendNUIMessage({
+        Speed = limit,
+        Display = bool
+    })
+end
 
-Citizen.CreateThread(function()
-
+CreateThread(function()
     while true do
-        Citizen.Wait(1000)
-        local playerpos = GetEntityCoords(GetPlayerPed(-1))
-        local roadhash = GetStreetNameAtCoord(playerpos.x, playerpos.y, playerpos.z)
-        road = GetStreetNameFromHashKey(roadhash)
-
+        Wait(1000)
+        local coords = GetEntityCoords(PlayerPedId())
+        local roadhash = GetStreetNameAtCoord(coords.x, coords.y, coords.z)
+        local road = GetStreetNameFromHashKey(roadhash)
 
         if IsPedInAnyVehicle(pPed) then
             limit = SpeedLimits[road]
-            if limit == nil then
+            if not limit then
                 if locale == "mph" then
                     limit = 45
                 elseif locale == "kmh" then
@@ -31,25 +33,10 @@ Citizen.CreateThread(function()
                     limit = 45
                 end
             end
-            LimitNui()
+            limitUi(true)
         else
-            HideLimitNui()
+            limitUi(false)
             limit = 0
         end
-    end    
+    end
 end)
-
-
-function LimitNui()
-    SendNUIMessage({
-        Speed = limit,
-        Display = false
-    })
-end
-
-function HideLimitNui()
-    SendNUIMessage({
-        Speed = limit,
-        Display = true
-    })
-end

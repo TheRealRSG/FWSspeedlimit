@@ -1,11 +1,11 @@
-$(function(){
-    window.addEventListener("message", function(event){
-        var item = event.data;
+$(function() {
+    window.addEventListener("message", function(e) {
+        let item = e.data;
         $('#Speed').text(`${item.Speed}`);
-        if(item.Display){
+        if (item.Display) {
             $('#all').fadeOut()
 
-        }else{
+        } else {
             $('#all').fadeIn() 
         }
     })
