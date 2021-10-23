@@ -1,12 +1,11 @@
-$(function(){
-    window.addEventListener("message", function(event){
-        var item = event.data;
-        $('#Speed').text(`${item.Speed}`);
-        if(item.Display){
-            $('#all').fadeOut()
-
-        }else{
-            $('#all').fadeIn() 
+window.addEventListener('load', () => {
+    this.addEventListener("message", e => {
+        let item = e.data;
+        document.getElementById('Speed').textContent = e.data.Speed
+        if (item.Display) {
+            document.getElementById('all').style.display = 'block';
+        } else {
+            document.getElementById('all').style.display = 'none';
         }
     })
 })
